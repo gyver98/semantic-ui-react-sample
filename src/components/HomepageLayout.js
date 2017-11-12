@@ -111,6 +111,7 @@ export default class HomepageLayout extends Component {
                   bordered
                   rounded
                   size='large'
+                  label={{ as: 'a', corner: 'left', icon:'heart'}}
                   src={whiteImage}
                 />
               </Grid.Column>
