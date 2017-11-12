@@ -1,9 +1,10 @@
-import React from 'react'
-import { Card, Icon, Image } from 'semantic-ui-react'
+import React from 'react';
+import { Card, Icon, Image } from 'semantic-ui-react';
+import matthew from '../assets/images/avatar/large/matthew.png';
 
 const CardExample = () => (
   <Card>
-    <Image src='/assets/images/avatar/large/matthew.png' />
+    <Image src={matthew} />
     <Card.Content>
       <Card.Header>
         Matthew
