@@ -6,13 +6,14 @@ import HomepageLayout from './components/HomepageLayout';
 import HeaderExampleImage from './components/HeaderExampleImage';
 import CardExample from './components/CardExample';
 import GridExampleDividedNumber from './GridExampleDividedNumber';
+import MenuExample from './components/MenuExample';
 
 
 class App extends Component {
   render() {
     return (
     <div>
-      <HomepageLayout />
+      <MenuExample />
     </div>
     )
   }
