@@ -1,5 +1,19 @@
 import React, { Component } from 'react';
-import { Menu, Segment } from 'semantic-ui-react';
+import {
+  Button,
+  Container,
+  Divider,
+  Grid,
+  Header,
+  Icon,
+  Image,
+  List,
+  Menu,
+  Segment,
+  Visibility,
+} from 'semantic-ui-react';
+import whiteImage from '../assets/images/wireframe/white-image.png';
+import nan from '../assets/images/avatar/large/nan.jpg';
 import Scroll, { Link, Element, DirectLink, Events, scroll, scrollSpy, scroller } from 'react-scroll';
 import Paragraph from '../assets/images/wireframe/paragraph.png';
 import './app.css';
@@ -86,7 +100,37 @@ export default class MenuExample extends Component {
 
         
           <Element name="test1" className="element" >
-            Test1
+          <Segment style={{ padding: '8em 0em' }} vertical>
+          <Grid container stackable verticalAlign='middle'>
+            <Grid.Row>
+              <Grid.Column width={8}>
+                <Header as='h3' style={{ fontSize: '2em' }}>We Help Companies and Companions</Header>
+                <p style={{ fontSize: '1.33em' }}>
+                  We can give your company superpowers to do things that they never thought possible. Let us delight
+                  your customers and empower your needs... through pure data analytics.
+                </p>
+                <Header as='h3' style={{ fontSize: '2em' }}>We Make Bananas That Can Dance</Header>
+                <p style={{ fontSize: '1.33em' }}>
+                  Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.
+                </p>
+              </Grid.Column>
+              <Grid.Column floated='right' width={6}>
+                <Image
+                  bordered
+                  rounded
+                  size='large'
+                  label={{ as: 'a', corner: 'left', icon:'heart'}}
+                  src={whiteImage}
+                />
+              </Grid.Column>
+            </Grid.Row>
+            <Grid.Row>
+              <Grid.Column textAlign='center'>
+                <Button size='huge'>Check Them Out</Button>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Segment>
           </Element>
         
       
