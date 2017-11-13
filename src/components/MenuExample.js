@@ -86,9 +86,12 @@ export default class MenuExample extends Component {
 
     return (
       <div>
-      <Menu pointing secondary fixed='top'>
-      <Link activeClass="active" className="test1" to="test1" spy={true} smooth={true} duration={500} >
+      <Menu  pointing secondary fixed='top'>
+      <Link activeClass="active" className="home" to="home" spy={true} smooth={true} duration={500} >
           <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
+      </Link>
+      <Link activeClass="active" className="test1" to="test1" spy={true} smooth={true} duration={500} >
+          <Menu.Item name='work' active={activeItem === 'work'} onClick={this.handleItemClick} />
       </Link>    
       <Link activeClass="active" className="test2" to="test2" spy={true} smooth={true} duration={500}>      
           <Menu.Item name='messages' active={activeItem === 'messages'} onClick={this.handleItemClick} />
@@ -98,7 +101,35 @@ export default class MenuExample extends Component {
       </Link>    
       </Menu>
 
-        
+        <Element name="home">
+        <Segment
+            inverted
+            textAlign='center'
+            style={{ minHeight: 700, padding: '1em 0em' }}
+            vertical
+          >
+          
+
+            <Container text>
+              <Header
+                as='h1'
+                content='Imagine-a-Company'
+                inverted
+                style={{ fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '3em' }}
+              />
+              <Header
+                as='h2'
+                content='Do whatever you want when you want to.'
+                inverted
+                style={{ fontSize: '1.7em', fontWeight: 'normal' }}
+              />
+              <Button primary size='huge'>
+                Get Started
+                <Icon name='right arrow' />
+              </Button>
+            </Container>
+          </Segment>
+        </Element>
           <Element name="test1"  >
           <Segment style={{ padding: '8em 0em' }} vertical>
           <Grid container stackable verticalAlign='middle'>
